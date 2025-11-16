@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: skyblue;
+}
+
+header {
+  background: none;          
+  height: auto;              
+  padding: 0;
+  overflow: hidden;
+}
+
+header img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.info-card, .summary-card {
+  background: #0a97d9;
+  color: white;
+  max-width: 900px;
+  margin: 25px auto;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto
+}
+
+.goal-card img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.goal-card:hover img {
+  transform: scale(1.08);
+}
+
+.sdg {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 40px 25px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+}
+
+.sdg h2 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.SDG {
+  width: 450px;      
+  height: 350px;     
+  object-fit: cover; 
+  border-radius: 10px;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #0a97d9;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  margin: 20px auto;
+  font-size: 1rem;
+  transition: background 0.3s, transform 0.2s;
+  min-height: 44px;
+}
+
+.back-button:hover {
+  background-color: lightblue;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .info-card, .summary-card, .sdg {
+    margin: 15px;
+    padding: 20px;
+  }
+  
+  .sdg {
+    margin: 40px 15px;
+    padding: 25px 15px;
+  }
+  
+  .sdg h2 {
+    font-size: 1.6rem;
+  }
+  
+  .goals-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    padding: 15px;
+  }
+
+.back-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .info-card, .summary-card, .sdg {
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  .sdg {
+    margin: 30px 10px;
+    padding: 20px 10px;
+  }
+
+.sdg h2 {
+    font-size: 1.4rem;
+  }
+  
+  .goals-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .back-button {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .goals-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
